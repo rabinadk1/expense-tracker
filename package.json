@@ -1,0 +1,32 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Backend for expense-tracker",
+  "main": "index.js",
+  "author": "rabinadk1 <rabin.adk1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node buildserver/index.js",
+    "build:client": "yarn --cwd client build",
+    "build:server": "tsc",
+    "build": "yarn --cwd client install && concurrently 'yarn:build:client' 'yarn:build:server'",
+    "dev:server": "nodemon buildserver/index.js",
+    "watch:server": "tsc -w --preserveWatchOutput",
+    "dev:client": "yarn --cwd client start",
+    "dev": "concurrently 'yarn:dev:client' 'yarn:watch:server' 'yarn:dev:server'"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.21",
+    "@types/morgan": "^1.9.0",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.3"
+  }
+}
