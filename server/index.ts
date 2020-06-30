@@ -8,8 +8,7 @@ import connectDB from "./config/db";
 
 const result = config({ path: "config.env" });
 
-// Throwing error because without it database doesn't work
-if (result.error) throw result.error;
+//if (result.error) throw result.error;
 
 connectDB();
 
