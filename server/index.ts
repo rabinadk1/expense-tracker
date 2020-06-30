@@ -6,7 +6,8 @@ import morgan from "morgan";
 import TransactionRouter from "./routes/transactions";
 import connectDB from "./config/db";
 
-const result = config({ path: "config.env" });
+// Give absolute path of one dir above
+config({ path: path.resolve(path.dirname(__dirname), "config.env") });
 
 //if (result.error) throw result.error;
 
