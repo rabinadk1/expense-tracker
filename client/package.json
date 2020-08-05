@@ -9,13 +9,16 @@
     "@types/react-dom": "^16.9.0",
     "react-loading": "^2.0.3",
     "react-scripts": "3.4.1",
-    "typescript": "~3.9.6"
+    "typescript": "~3.9.6",
+    "snyk": "^1.369.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +35,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "snyk": true
 }
