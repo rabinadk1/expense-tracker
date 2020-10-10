@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
-    "@types/mongoose": "^5.7.21",
+    "@types/mongoose": "^5.7.36",
     "@types/morgan": "^1.9.0",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
