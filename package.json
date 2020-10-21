@@ -1,19 +1,20 @@
 {
   "name": "expense-tracker",
   "version": "1.0.0",
+  "private":true,
   "description": "Backend for expense-tracker",
   "main": "index.js",
   "author": "rabinadk1 <rabin.adk1@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node buildserver/index.js",
-    "build:client": "yarn --cwd client build",
+    "build:client": "npm run build --prefix client",
     "build:server": "tsc",
-    "build": "yarn --cwd client install && concurrently 'yarn:build:client' 'yarn:build:server'",
+    "build": "npm install --prefix client && concurrently 'npm:build:client' 'npm:build:server'",
     "dev:server": "nodemon buildserver/index.js",
     "watch:server": "tsc -w --preserveWatchOutput",
-    "dev:client": "yarn --cwd client start",
-    "dev": "concurrently 'yarn:dev:client' 'yarn:watch:server' 'yarn:dev:server'"
+    "dev:client": "npm start --prefix client",
+    "dev": "concurrently 'npm:dev:client' 'npm:watch:server' 'npm:dev:server'"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
