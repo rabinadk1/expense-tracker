@@ -17,7 +17,7 @@
     "dev": "concurrently 'npm:dev:client' 'npm:watch:server' 'npm:dev:server'"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.7",
     "morgan": "^1.10.0"
